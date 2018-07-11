@@ -32,28 +32,28 @@ body{
 	width: 300px;
 	margin-top:0px;
 	float:left;
-	height:1000px;/*silenecek*/
-	background-color: black;
+	height:760px;/*silenecek*/
+	/*background-color: green;silenecek*/
+	 overflow: auto;
+	 position:fixed;
 }
 .govdesagdiv{
 	width: 950px;
 	margin-top:0px;
 	float:right;
 	height:1000px;/*silenecek*/
-	background-color: gray;
 }
-.altdiv{
+.govdeustdiv{
 	width: 950px;
-	background-color: purple;
-	position:bottom;
+	/*background-color: gray;silenecek*/
+	height:950px
 }
 .temizle{clear: both;}
 .logo{
 	width:130px; 
 	height:22px;
 }
-.ln {
-
+.ln {/*üstteki menü için kullanıldı*/
   background-color: white;
   font-weight: bold;
   font-family:arial;
@@ -61,7 +61,7 @@ body{
 	margin-right:auto;
 	width: 1250px;
 	margin-top:0px;
-
+	
 }
 .ln a {
   float: left;
@@ -84,6 +84,7 @@ body{
 
 .ln .search-container {
   float: right;
+ 
 }
 
 .ln input[type=text] {
@@ -102,6 +103,28 @@ body{
   font-size: 17px;
   border: none;
   cursor: pointer;
+}
+.aln {/*alt kısımdaki iletişim çubuğu için kullanıldı*/
+  font-weight: bold;
+  font-family:arial;
+  margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	width: 950px;
+	border-top: 1px solid black;
+}
+.aln a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.aln a:hover {
+  background-color: #ddd;
+  color: black;
 }
 .dropbtn {
     background-color: white;
@@ -139,4 +162,9 @@ body{
 
 .dropdown:hover .dropbtn {background-color: #ddd;}
 
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .usticdiv, .govdesagdiv {
+    width:100%;
+  }
 
