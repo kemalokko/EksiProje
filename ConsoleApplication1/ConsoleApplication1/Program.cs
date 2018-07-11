@@ -12,6 +12,7 @@ namespace ConsoleApplication1
         {
             Console.WriteLine("asda");
             Console.WriteLine("12");
+            Console.WriteLine("ew");
         }
     }
 }
