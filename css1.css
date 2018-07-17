@@ -3,78 +3,71 @@ body{
 	margin:0px;
 	padding:0px;
 }
-/*.classhr{
-	display: block;
-    height: 0px;
-    border: 0;
-    border-top: 5px solid purple;
-    margin: 0em 0;
-    padding: 0;
-}*/
-* {
-    box-sizing: border-box;
-}
-.ustdiv{
+.ustdiv{/*menüyü tutan ana kısım*/
 	margin: 0px;
 	border-top: 5px solid green;
 	width:100%;
 	position:fixed;
-	background-color: blue;
+	background-color: white;
+	max-height:110px;
+
 }
-.govdediv{
+.govdediv{/*gövdeyi tutan ana kısım*/
 	padding-top:110px;
 }
-.govdeicdiv{
+.govdeicdiv{/*govdedeki sag ve sol divin olduğu kısım*/
 	margin-left:auto;
 	margin-right:auto;
-	width: 100%;
+	width: 72%;
 	margin-top:0px;
 	background-color: white;
 }
-.govdesoldiv{
-	width: 25%;
+.govdesoldiv{/*baslıkların geleceği kısım -/- scroll bar olan kısım*/
+	width: 11.52%;
 	margin-top:0px;
 	float:left;
-	height:760px;/*silenecek*/
-	/*background-color: green;silenecek*/
+	height:860px;
 	 overflow: auto;
 	 position:fixed;
 }
-.govdesagdiv{
-	width: 75%;
+.govdesagdiv{/*govdenin içindeki entry girilecek kısım ve iletişim olan divin içinde olduğu div*/
+	width: 80%;
 	margin-top:0px;
 	float:right;
-	height:1000px;/*silenecek*/
+	height:1000px;/*entry girilince silenecek veya auto yazılabiliriz*/
 }
-.govdeustdiv{
-	width: 75%;
-	margin-left:15px;
-	/*background-color: gray;silenecek*/
-	height:950px
+.govdeustdiv{/*entry girelecek kısım*/
+	width: 100%;
 }
 .temizle{clear: both;}
 .logo{
-	width:130px; 
+	/*width:130px;
 	height:22px;
+	background-image:url("picture/logo2.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%;*/
 }
-.ln {/*üstteki menü için kullanıldı*/
+.sagla{
+	float:right;
+}
+.ln {/*üstteki menü için kullanıldı gündem ile logounun olduğu div burdan türeme*/
   background-color: white;
   font-weight: bold;
   font-family:arial;
   margin-left:auto;
 	margin-right:auto;
-	width: 100%;
+	width: 72%;
 	margin-top:0px;
 	
 }
 .ln a {
-  float: left;
-  display: block;
+  display:inline-block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1% 1.33%;/**/
   text-decoration: none;
-  font-size: 17px;
+  font-size: 100%;
 }
 .ln a:hover {
   background-color: #ddd;
@@ -87,34 +80,38 @@ body{
 }
 
 .ln .search-container {
-  float: right;
+display:inline-block;
  
 }
 
 .ln input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
+  padding: 8px;/**/
+  /*margin-top: 8px;*/
+  font-size: 100%;/**/
   border: none;
 }
 
 .ln .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 55px;
+  padding: 8px 10px;
+  /*margin-top: 8px;*/
+  /*margin-right: 16px;*/
   background: #ddd;
-  font-size: 17px;
+  font-size: 100%;/**/
   border: none;
   cursor: pointer;
+  display:inline-block;
+
 }
-.aln {/*alt kısımdaki iletişim çubuğu için kullanıldı*/
+.gizlen{
+	display:none;
+}
+.aln {/*alt kısımdaki iletişim çubuğunu bulunduran div*/
   font-weight: bold;
   font-family:arial;
   margin-left:auto;
 	margin-right:auto;
 	margin-top:0px;
-	width: 75%;
+	width:100%;
 	border-top: 1px solid black;
 }
 .aln a {
@@ -130,22 +127,22 @@ body{
   background-color: #ddd;
   color: black;
 }
-.dropbtn {
+.dropbtn {/*... olan kısımdaki açılır butonu sağlayan class*/
     background-color: white;
     color: black;
-    padding: 16px;
-    font-size: 16px;
+    padding: 16px;/**/
+    font-size: 16px;/**/
     border: none;
 	font-weight: bold;
 	font-family:arial;
 }
 
-.dropdown {
+.dropdown {/*... olan kısımdaki açılır butonu sağlayan class*/
     position: relative;
     display: inline-block; 
 }
 
-.dropdown-content {
+.dropdown-content {/*... olan kısımdaki açılır butonu sağlayan class*/
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -154,21 +151,93 @@ body{
     z-index: 1000;
 }
 
-.dropdown-content a {
+.dropdown-content a {/*... olan kısımdaki açılır butonu sağlayan class*/
     color: black;
-    padding: 12px 16px;
+    padding: 12px 16px;/**/
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd;}/*... olan kısımdaki açılır butonu sağlayan class*/
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: block;}/*... olan kısımdaki açılır butonu sağlayan class*/
 
-.dropdown:hover .dropbtn {background-color: #ddd;}
+.dropdown:hover .dropbtn {background-color: #ddd;}/*... olan kısımdaki açılır butonu sağlayan class*/
 
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .usticdiv, .govdesagdiv {
+.asd{
+	text-align:center;
+	font-weight: bold;
+	font-size:20px;
+}
+.asd input[type=text ],[type=password], [type=date]{
+    width: 50%;
+    padding: 6px 10px;
+    box-sizing: border-box;
+}
+
+
+.asd input[type=checkbox] {
+ margin-left: 30px;
+}
+
+.labeller{
+    margin :30px;
+}
+
+.button1{
+    background-color: green; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px;
+    cursor: pointer;
+    width: 40%;
+}
+.form1{border:5px solid red;}
+.baslik1{background-color:black; color:red;}
+@media only screen and (max-width:1080px) {/*üstteki menuleri responsive işlemi*/
+  .ln{
+    /*width:100%;*/
+  }
+
+  @media only screen and (max-width:900px) {/*responsive işlemi*/
+  .aln,.govdesagdiv,.govdeustdiv,.govdeicdiv
+  {
     width:100%;
   }
+  .gizlenr{display:none;}
+  .gizlen{display:inline;}
+  .govdesoldiv /*baslıkların bulunacağı kısım 900px olunca yok ediyo*/
+  {
+	display:none;
+  }
+  .logo{
+	  background-image:url("picture/logo.png");
+  }
+  .ln input[type=text] {
+  width:30%;
+}
+
+.ln .search-container button {
+  width:20%;
+  font-size:15px;
+
+}
+.govdeustdiv{
+	margin:0;
+	padding:0;
+}
+
+@media only screen and (max-width:465px) {
+    .ln{
+	  font-size:11px;
+	  }
+  .ln2 a,.dropbtn {
+	  padding: 15px 6px;
+  }
+  
+
 
