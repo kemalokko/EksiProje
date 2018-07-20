@@ -1,7 +1,26 @@
-body{
+﻿body{
 	background:white;
 	margin:0px;
 	padding:0px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li a{
+    display: block;
+    width:200px;
+    background-color: gray;
+}
+.container{
+    padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+.index-section{
+    width: 245px;
 }
 .ustdiv{/*menüyü tutan ana kısım*/
 	margin: 0px;
@@ -9,12 +28,16 @@ body{
 	border-bottom: 1px solid gray;
 	width:100%;
 	position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 	background-color: white;
 	max-height:110px;
+    
 }
+
 .govdediv{/*gövdeyi tutan ana kısım*/
-  padding-top:110px;
-  
+	margin-top:110px;
 }
 .govdeicdiv{/*govdedeki sag ve sol divin olduğu kısım*/
 	margin-left:auto;
@@ -22,26 +45,34 @@ body{
 	width: 72%;
 	margin-top:0px;
 	background-color: white;
-	max-width:1370px;
+	max-width:1240px;
 	}
 .govdesoldiv{/*baslıkların geleceği kısım -/- scroll bar olan kısım*/
 	width: 12.70%;
 	margin-top:0px;
 	float:left;
 	height:88%;
-	 overflow: auto;
-	 position:fixed;
-   max-width:258px; 
+	overflow: auto;
+	position:fixed;
+	max-width:258px;
 }
 .govdesagdiv{/*govdenin içindeki entry girilecek kısım ve iletişim olan divin içinde olduğu div*/
 	width: 80%;
+    overflow-y: scroll;
 	margin-top:0px;
-  float:right;
-  
-	height:1000px;/*entry girilince silenecek veya auto yazılabiliriz*/
+	float:right;
+    overflow: auto;
+    position: static;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    top: 110px; right: 0; bottom: 0; left: 0;
+    vertical-align: baseline;
+	height:1000px;/*entry girilince silenecek veya auto yazabiliriz*/
 }
 .govdeustdiv{/*entry girelecek kısım*/
 	width: 100%;
+    overflow: auto;
 }
 .temizle{clear: both;}
 .logo{
@@ -63,7 +94,7 @@ body{
 	margin-right:auto;
 	width: 72%;
 	margin-top:0px;
-	max-width:1370px;
+	max-width:1240px;
 }
 .ln a {
   display:inline-block;
@@ -203,46 +234,57 @@ display:inline-block;
 }
 .form1{border:5px solid red;}
 .baslik1{background-color:black; color:red;}
-@media only screen and (max-width:1080px) {/*üstteki menuleri responsive işlemi*/
-  .ln{
-    /*width:100%;*/
-  }
+@media only screen and (max-width:1080px) { /*üstteki menuleri responsive işlemi*/
+    .ln {
+        /*width:100%;*/
+    }
 
-  @media only screen and (max-width:900px) {/*responsive işlemi*/
-  .aln,.govdesagdiv,.govdeustdiv,.govdeicdiv
-  {
-    width:100%;
-  }
-  .gizlenr{display:none;}
-  .gizlen{display:inline;}
-  .govdesoldiv /*baslıkların bulunacağı kısım 900px olunca yok ediyo*/
-  {
-	display:none;
-  }
-  .logo{
-	  background-image:url("picture/logo.png");
-  }
-  .ln input[type=text] {
-  width:30%;
+    @media only screen and (max-width:900px) { /*responsive işlemi*/
+        .aln, .govdesagdiv, .govdeustdiv, .govdeicdiv {
+            width: 100%;
+        }
+
+        .gizlenr {
+            display: none;
+        }
+
+        .gizlen {
+            display: inline;
+        }
+
+        .govdesoldiv /*baslıkların bulunacağı kısım 900px olunca yok ediyo*/ {
+            display: none;
+        }
+
+        .logo {
+            background-image: url("picture/logo.png");
+        }
+
+        .ln input[type=text] {
+            width: 30%;
+        }
+
+        .ln .search-container button {
+            width: 20%;
+            font-size: 15px;
+        }
+
+        .govdeustdiv {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media only screen and (max-width:465px) {
+            .ln {
+                font-size: 11px;
+            }
+
+            .ln2 a, .dropbtn {
+                padding: 15px 6px;
+            }
+        }
+    }
 }
-
-.ln .search-container button {
-  width:20%;
-  font-size:15px;
-
-}
-.govdeustdiv{
-	margin:0;
-	padding:0;
-}
-
-@media only screen and (max-width:465px) {
-    .ln{
-	  font-size:11px;
-	  }
-  .ln2 a,.dropbtn {
-	  padding: 15px 6px;
-  }
 
 
 

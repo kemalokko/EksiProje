@@ -11,24 +11,10 @@ namespace dnm.Controllers
     {
         public ActionResult Index()
         {
-            var controller = RouteData.Values["controller"];
-            var action = RouteData.Values["action"];
-            var id = RouteData.Values["id"];
-
-            var message = string.Format("{0}::{1} {2}",controller,action,id);
-
-            ViewBag.Message = message;
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            //ViewBag.Blyat = "Oy napen asd";
-            //ViewBag.Name = "Kemçük";
-            //ViewBag.Location = "kek";
-            var model = new AboutModel();
-            model.Name = "Kemal";
-            model.Location = "İstanbul";
+            var model =
+                from r in _threads
+                orderby r.Id
+                select r;
             return View(model);
         }
 
@@ -38,5 +24,18 @@ namespace dnm.Controllers
 
             return View();
         }
+        static List<Thread> _threads = new List<Thread>
+        {
+            new Thread
+            {
+                Id = 0,
+                Content = "Bıktım sanki bu hayattan",
+            },
+            new Thread
+            {
+                Id = 1,
+                Content = "Şaka la",
+            }
+        };
     }
 }

@@ -102,7 +102,7 @@ namespace dnm.Controllers
             {
                 Id = 2,
                 Name = "Marrakesh",
-                City = "<script>alert('xss');</script>",
+                City = "İstanbul",
                 Country = "USA",
                 Rating = 10
 

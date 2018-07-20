@@ -5,9 +5,9 @@ using System.Web;
 
 namespace dnm.Models
 {
-    public class AboutModel
+    public class Thread
     {
-        public string Name { get; set; }
-        public string Location { get; set; }
+        public int Id { get; set; }
+        public string Content { get; set; }
     }
 }

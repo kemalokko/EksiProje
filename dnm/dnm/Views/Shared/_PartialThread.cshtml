@@ -1,0 +1,27 @@
+﻿@model dnm.Models.Thread
+
+
+@{
+    ViewBag.Title = "DenemeThread";
+}
+
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Content)
+    </td>
+</tr>
+
+
+
+@*<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+        </tr>
+    }
+
+</table>*@
