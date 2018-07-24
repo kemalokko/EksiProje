@@ -17,6 +17,9 @@ namespace dnm
                 "cuisine/{name}",
                 new { Controller = "Cuisine", action = "Search", name = UrlParameter.Optional });
 
+            routes.MapRoute("Contact", "contact", 
+                new { Controller = "Home", action = "Contact", name = UrlParameter.Optional });
+
 
             routes.MapRoute(
                 name: "Default",

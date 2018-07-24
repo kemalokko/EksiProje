@@ -18,24 +18,313 @@ namespace dnm.Controllers
             return View(model);
         }
 
-        public ActionResult Contact()
+        public ActionResult About()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+        public ActionResult Contact()
+        {
+            return View();
+        }
+        public ActionResult Login()
+        {
+            return View();
+        }
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+
+
+
+
+
         static List<Thread> _threads = new List<Thread>
         {
             new Thread
             {
                 Id = 0,
-                Content = "Bıktım sanki bu hayattan",
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
             },
             new Thread
             {
-                Id = 1,
-                Content = "Şaka la",
-            }
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+            new Thread
+            {
+                Id = 0,
+                Content = "İçeriki de budur",
+                _Thread = "Başlıkı budur",
+            },
+
         };
     }
 }

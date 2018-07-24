@@ -9,5 +9,6 @@ namespace dnm.Models
     {
         public int Id { get; set; }
         public string Content { get; set; }
+        public string _Thread { get; set; }
     }
 }

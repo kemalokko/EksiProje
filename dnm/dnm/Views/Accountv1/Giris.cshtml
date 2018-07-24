@@ -1,0 +1,55 @@
+﻿@model dnm.Models.LoginModels
+
+
+@{
+    ViewBag.Title = "Giris";
+}
+
+@*@{ 
+    if (IsPost)
+    {
+        
+
+        string userName = Request.Form["UserName"];
+        Model.UserName = userName;
+        string name = Request.Form["Name"];
+        Model.Name = name;
+        string pword = Request.Form["Pword"];
+        Model.Password = pword;
+
+
+        string isimq = Request.Form["isim"];
+        string soyad = Request.Form["soyad"];
+        string kek = isimq + soyad;
+
+    <text>
+        You entered: <br />
+        Adın: @isimq<br />
+        Soyadın: @soyad <br />
+        adın soyadın koçum: @kek <br />
+    </text>
+        }
+    }*@
+
+
+@{ 
+    
+    
+}
+
+<h2>Giris</h2>
+
+<fieldset>
+    <legend>minamejef</legend>
+    <form method="post" action="Giris">
+        kullanıcı adın: <br />
+        <input type="text" name="UserName" /><br />
+        adın:<br />
+        <input type="text" name="Name" /><br />
+        şifren:<br />
+        <input type="password" name="Pword" /><br /><br />
+
+        <input type="submit" name="gönder" value="göndert" />
+
+    </form>
+</fieldset>
