@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace dnm.Controllers
 {
@@ -13,6 +15,7 @@ namespace dnm.Controllers
         [HttpGet]
         public ActionResult Giris()
         {
+            
             return View();
         }
 
@@ -21,14 +24,42 @@ namespace dnm.Controllers
         {
             if(logmodel.Name == _LoginModels[0].Name)
             {
-                ViewBag.Message = "giriş başarılı";
-                return View();
+                Session["LoginModels"] = new LoginModels() { Kek = "test" };
+                TempData["Message"] = "başarılı";
+                ViewBag.Message = TempData["Message"].ToString();
+                
+                return RedirectToAction("Index","Home");
             }
             ViewBag.Message = "bi sakatlık var tekrar dene";
-            return View(ViewBag);
+            return View();
         }
 
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> TestLogin(LoginModels model)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = await ApplicationUserManager.fi
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+
+
         public ActionResult Show()
+        {
+            return View();
+        }
+        public ActionResult Test()
         {
             return View();
         }

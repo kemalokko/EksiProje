@@ -8,6 +8,16 @@ namespace dnm.Models
 {
     public class LoginModels
     {
+
+
+
+
+
+
+
+
+
+
         //[Required]
         //[Display(Name = "Kullanıcı adı")]
         public string UserName { get; set; }
@@ -17,5 +27,6 @@ namespace dnm.Models
         //[Display(Name ="Şifre")]
         public string Name { get; set; }
         public string Password { get; set; }
+        public string Kek { get; set; }
     }
 }

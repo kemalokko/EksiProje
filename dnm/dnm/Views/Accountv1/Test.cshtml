@@ -1,20 +1,15 @@
 ﻿@using dnm.Models
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Test";
 }
 
+<h2>Test</h2>
 
-<h2>Index</h2>
-<p>başlıklar aksın</p>
-<p>@ViewBag.Message</p>
-
-
-@*@{
+@{
     if (TempData["Message"] != null)
     {
         <p>@TempData["Message"].ToString()</p>
     }
     var user = Session["LoginModels"] as LoginModels;
 }
-<h3>welkam @user.Kek</h3>*@
-
+<h3>welkam @user.Kek</h3>
