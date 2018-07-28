@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-
+using dnm.AuthData;
+using System.Web.Security;
 
 namespace dnm.Controllers
 {
@@ -14,13 +16,12 @@ namespace dnm.Controllers
         // GET: Accountv1
         [HttpGet]
         public ActionResult Giris()
-        {
-            
+        { 
             return View();
         }
 
         [HttpPost]
-        public ActionResult Giris(LoginModels logmodel)
+        public ActionResult Giris(LoginModels user)
         {
 
             //v1
@@ -37,20 +38,25 @@ namespace dnm.Controllers
             //return View();
 
             //v2->
-            if (logmodel.UserName == _LoginModels[0].Name)
+            if (IsValid(user))
             {
-                string authId = Guid.NewGuid().ToString();
-                Session["AuthID"] = authId;
-                var cookie = new HttpCookie("AuthID");
-                cookie.Value = authId;
-                Response.Cookies.Add(cookie);
+                //string authId = Guid.NewGuid().ToString();
+                //Session["AuthID"] = authId;
+                //var cookie = new HttpCookie("AuthID");
+                //cookie.Value = authId;
+                //Response.Cookies.Add(cookie);
+                FormsAuthentication.SetAuthCookie(user.UserName,false);
 
-                return RedirectToAction("Test");
+                return RedirectToAction("Show");
             }
 
-            return View();
+            return View(user);
         }
 
+        private bool IsValid(LoginModels user)
+        {
+            return (user.UserName == _LoginModels[0].UserName);
+        }
 
         public ActionResult Login()
         {
@@ -58,9 +64,10 @@ namespace dnm.Controllers
         }
 
 
-
+        [Authorize]
         public ActionResult Show()
         {
+            ViewData["uname"] = User.Identity.Name;
             return View();
         }
         
@@ -92,7 +99,7 @@ namespace dnm.Controllers
         {
             new LoginModels
             {
-                UserName = "gapçuk",
+                UserName = "jeff",
                 Name = "jeff",
                 Password = "jeff"
             },

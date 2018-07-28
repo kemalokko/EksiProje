@@ -13,10 +13,7 @@ namespace dnm
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("Cuisine",
-                "cuisine/{name}",
-                new { Controller = "Cuisine", action = "Search", name = UrlParameter.Optional });
-
+            
             routes.MapRoute("Contact", "contact", 
                 new { Controller = "Home", action = "Contact", name = UrlParameter.Optional });
 
