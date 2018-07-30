@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Dnmv3.Models.ThreadModels>
+
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(item.Thread,"","")
+            @*@Html.DisplayFor(modelItem => item.Thread)*@
+        </td>
+    </tr>
+}
+
+</table>

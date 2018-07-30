@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Dnmv3.Models.ThreadModels>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@foreach (var item in Model) {
+    <div>@Html.ActionLink(item.Thread, "", "")</div>
+    <div>@item.Content</div>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thread)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}

@@ -63,7 +63,6 @@ namespace dnm.Controllers
             return View();
         }
 
-
         [Authorize]
         public ActionResult Show()
         {
@@ -85,7 +84,6 @@ namespace dnm.Controllers
             {
                 return RedirectToAction("Giris", "Accountv1");
             }
-            
         }
 
         public ActionResult CreateUser()

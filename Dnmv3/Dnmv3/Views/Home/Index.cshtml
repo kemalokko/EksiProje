@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+<p>başlıklar aksın</p>
+<p>@ViewBag.Message</p>
+
+
+@*@{
+        if (TempData["Message"] != null)
+        {
+            <p>@TempData["Message"].ToString()</p>
+        }
+        var user = Session["LoginModels"] as LoginModels;
+    }
+    <h3>welkam @user.Kek</h3>*@
+
